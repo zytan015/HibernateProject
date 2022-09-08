@@ -21,16 +21,6 @@ public class ClinicalData {
 	
 	@Column(nullable=false)
 	private String measuredDateTime;  
-//	
-//	@ManyToOne
-//	@JoinColumn(name="cid", nullable=false)
-//	private Patient patient;
-//	
-//	public ClinicalData(String componentName, int componentValue, String measuredDateTime, Patient p) {
-//		this.componentName = componentName;
-//		this.measuredDateTime = measuredDateTime;
-//		this.patient = p;
-//	}
 
 	public int getCid() {
 		return cid;
