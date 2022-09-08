@@ -15,7 +15,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Patient {
 	@Id
-	//@Column(unique=true, nullable=false)
+	@Column(unique=true, nullable=false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int pid;
 	
@@ -29,7 +29,8 @@ public class Patient {
 	private int age;
 	
 	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="cid")
+	@JoinColumn(name="pid")
+	@OrderColumn(name="type")
 	private List<ClinicalData> clinicalData;
 
 	public int getPid() {
